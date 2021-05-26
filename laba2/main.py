@@ -35,8 +35,6 @@ def statistical_query():
 
     with open('Query.csv', 'w', encoding="utf-8") as result_csv:
         csv_writer = csv.writer(result_csv)
-        header_row = ['Область', 'Рік', 'Середній бал з фізики']
-        csv_writer.writerow(header_row)
         for row in cursor:
             csv_writer.writerow(row)
 
